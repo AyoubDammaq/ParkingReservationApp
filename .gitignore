@@ -1,0 +1,88 @@
+# **.gitignore for Spring (Java)**
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Maven
+.target/
+mvnw
+mvnw.cmd
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+.idea/
+.settings/
+.vscode/
+
+# Gradle
+.gradle/
+build/
+gradle-wrapper.jar
+gradle-wrapper.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+*.launch
+
+# Spring Boot
+spring-boot-devtools/
+target/
+
+# JAR and WAR files
+*.jar
+*.war
+*.ear
+
+# Java binary files
+*.exe
+*.dll
+*.so
+
+# H2 database
+h2/
+
+# **.gitignore for Angular (JavaScript)**
+
+# Node.js
+node_modules/
+
+# Dependency directories
+jspm_packages/
+
+# Build output
+dist/
+tmp/
+out-tsc/
+
+# IDEs
+.idea/
+.vscode/
+
+# Environment files
+*.env
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Angular CLI
+.angular/
+
+# Angular/CLI cache
+.cache/

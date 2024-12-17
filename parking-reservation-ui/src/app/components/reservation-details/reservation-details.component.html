@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Détails de la Réservation</h2>
+
+  <div *ngIf="reservation">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ reservation.clientName }}</h5>
+        <p class="card-text"><strong>Véhicule:</strong> {{ reservation.vehicleNumber }}</p>
+        <p class="card-text"><strong>Emplacement:</strong> {{ reservation.parking_slot }}</p>
+        <p class="card-text"><strong>Date de Réservation:</strong> {{ reservation.reservationDate | date: 'dd/MM/yyyy' }}</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a [routerLink]="['/edit', reservation.id]" class="btn btn-warning px-4 py-2 rounded-pill">
+        <i class="fas fa-edit"></i> Modifier
+      </a>
+      <button (click)="deleteReservation()" class="btn btn-danger px-4 py-2 rounded-pill ms-3">
+        <i class="fas fa-trash-alt"></i> Supprimer
+      </button>
+    </div>
+  </div>
+</div>

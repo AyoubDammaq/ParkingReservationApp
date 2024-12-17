@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Liste des Réservations</h2>
+  <!-- Bouton Ajouter une réservation -->
+  <div class="text-center mb-4">
+    <a routerLink="/add" class="btn btn-primary px-4 py-2 rounded-pill">
+      <i class="fas fa-plus"></i> Ajouter une Réservation
+    </a>
+  </div>
+
+  <!-- Grille des emplacements de parking -->
+  <div class="grid-container">
+    <!-- Itération sur les lignes (A à F) et les colonnes (1 à 6) -->
+    <div class="grid-row" *ngFor="let row of rows">
+      <div class="grid-item" *ngFor="let col of columns" [ngClass]="getSpotClass(row, col)"
+           (click)="handleSpotClick(row, col)">
+        <!-- Si le spot est réservé -->
+        <div *ngIf="getSpotReservation(row, col)" class="reservation-card">
+          <div class="reservation-info">
+            <strong>{{ getSpotReservation(row, col).clientName }}</strong><br />
+            {{ getSpotReservation(row, col).vehicleNumber }}<br />
+            {{ getSpotReservation(row, col).reservationDate | date: 'dd/MM/yyyy' }}
+          </div>
+        </div>
+        <!-- Affichage de l'identifiant du spot -->
+        <div class="spot-id">
+          {{ row }}{{ col }}
+        </div>
+        <!-- Si le spot est libre -->
+        <div *ngIf="!getSpotReservation(row, col)" class="empty-spot">
+          <span>Aucun</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

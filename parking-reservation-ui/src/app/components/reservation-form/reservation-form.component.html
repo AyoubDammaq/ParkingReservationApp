@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h2>{{ isEdit ? 'Modifier' : 'Ajouter' }} une Réservation</h2>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="saveReservation()">
+        <div class="mb-3">
+          <label for="clientName" class="form-label">Nom du Client</label>
+          <input type="text" id="clientName" [(ngModel)]="reservation.clientName" name="clientName" class="form-control" placeholder="Entrez le nom du client" required>
+        </div>
+        <div class="mb-3">
+          <label for="vehicleNumber" class="form-label">Numéro du Véhicule</label>
+          <input type="text" id="vehicleNumber" [(ngModel)]="reservation.vehicleNumber" name="vehicleNumber" class="form-control" placeholder="Entrez le numéro du véhicule" required>
+        </div>
+        <div class="mb-3">
+          <label for="parkingSlot" class="form-label">Emplacement</label>
+          <input type="text" id="parkingSlot" [(ngModel)]="reservation.parkingSlot" name="parkingSlot" class="form-control" placeholder="Entrez l'emplacement" required>
+        </div>
+        <div class="mb-3">
+          <label for="reservationDate" class="form-label">Date</label>
+          <input type="date" id="reservationDate" [(ngModel)]="reservation.reservationDate" name="reservationDate" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label>
+            <input type="checkbox" [(ngModel)]="reservation.isActive" name="isActive">
+            Actif
+          </label>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Enregistrer</button>
+        <a routerLink="/" class="btn btn-secondary w-100 mt-2">Annuler</a>
+      </form>
+    </div>
+  </div>
+</div>

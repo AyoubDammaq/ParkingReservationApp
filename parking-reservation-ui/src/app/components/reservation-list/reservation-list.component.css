@@ -1,0 +1,105 @@
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grille des parkings */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.grid-item {
+  background-color: #f4f4f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Card de réservation */
+.reservation-card {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Boutons Modifier et Supprimer */
+.button-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 50%;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+/* Style pour les spots libres */
+.empty-spot {
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+/* Identifiant du spot */
+.spot-id {
+  font-size: 12px;
+  color: #495057;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Mise en forme des boutons Ajouter une réservation */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 50px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Centre le titre et le bouton Ajouter */
+.text-center {
+  text-align: center;
+}
+
+/* Amélioration du texte du titre */
+h2 {
+  font-size: 28px;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
